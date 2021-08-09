@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Search Page</title>
+    <link rel="stylesheet" type="text/css" href="../css/allpages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        body{
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo"><img src="../images/KTSicon.jpg" alt="KTS" width= "145px" height="70px"></div>
+        <div class="systemname"><p><b>K T S  E  -  T i c k e t i n g   S y s t e m</b></p></div>
+        <ul class="links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="loginpage.html">Login</a></li>
+            <li><a href="registrationpage.html">Register</a></li>
+            <li><a href="#search">Search</a></li>      
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+<!-- =================================== Main Area ========================================== -->
+</br></br></br>
+<div id="head">
+    <h2>Search Page</h2>
+</div>
+
+<div id="SessionMessage">
+    <span class="fas fa-exclamation-circle"></span>
+    <span class="error">Warning: This is a warning alert!</span>
+    <div class="close-btn">
+      <span class="fas fa-times"></span>
+    </div>
+</div>
+
+<form class="searching-form-box" name="search">
+    <div class="radio-btn">
+        <input type="radio" class="btn" name="check" value="Return" checked="checked">
+        <span>Return</span>
+        <input type="radio" class="btn" name="check" value="One Way">
+        <span>One Way</span>
+    </div>
+    <div class="searching-form">
+        <input type="text" class="form-control" placeholder="Departure Location (Type In)" name="DepartureLocation">
+        <input type="text" class="form-control" placeholder="Arrival Location (Type In)" name="ArrivalLocation">
+		
+		<select name="Bustype" class="form-control" style="margin: 0 0 30px 5px; padding: 10px 0; width: 295px; border:2px solid #DAEEEF;">
+			<option value="none" selected>Bus Comfort Type (Optional):</option>
+			<option value="Standard">Standard</option>
+			<option value="Semi-Luxury">Semi-Luxury</option>
+			<option value="Luxury">Luxury</option>
+		</select> <br>
+		
+		<select name="fleet" class="form-control" style="margin: 0 0 30px 5px; padding: 10px 0; width: 295px; border:2px solid #DAEEEF;" >
+			<option value="none" selected>Bus Fleet (Optional):</option>
+			<option value="SCANIA">SCANIA</option>
+			<option value="MAN">MAN</option>
+			<option value="VOLVO">VOLVO</option>
+		</select> <br>
+		
+		<input type="number" class="form-control" placeholder="Maximum Price (Optional)" name="price" style="margin: 0 0 30px 5px; padding: 10px 0; width: 295px; border:2px solid #DAEEEF;"> <br>
+
+        <div class="input-data">
+            <label>Departing</label>
+            <input type="date" name="DepartDate" class="form-control select-date">
+        </div>
+        <div class="input-data">
+            <label>Returning</label>
+            <input type="date" name="ReturnDate" class="form-control select-date">
+        </div>
+
+        <div class="input-type">
+            <label>Adults</label>
+            <input type="number" name="Adults" class="form-control" value="1">
+        </div>
+        <div class="input-type">
+            <label>Children</label>
+            <input type="number" name="Children" class="form-control" value="0">
+        </div>
+        <div class="input-type">
+            <label>Infants</label>
+            <input type="number" name="Infants" class="form-control" value="0">
+        </div>
+            
+        <!-- <div class="input-btn">
+            <button type="button" class="payment-btn">Pay with Credit Card</button>
+            <button type="button" class="payment-btn">Pay with Paypal</button>
+        </div> -->
+		<input class="payment-btn" type="submit" name="Submit" value="Search">
+    </div>
+</form>
+
+<form action="searchresult.html" class="typeinbar">
+    <input type="submit" value="View All Bus Tickets">
+</form>
+<!-- ================================= Main Area Above ====================================== -->
+<footer>
+    <p>Copyright &copy; 2021, Louay Beltaief, Obie Burns, Buyoung Choi, Hui Jiang, Joshua Perry</p>
+</footer>
+  </body>
+  </html>

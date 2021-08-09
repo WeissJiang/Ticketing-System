@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="../css/allpages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo"><img src="../images/KTSicon.jpg" alt="KTS" width= "145px" height="70px"></div>
+        <div class="systemname"><p><b>K T S  E  -  T i c k e t i n g   S y s t e m</b></p></div>
+        <ul class="links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="loginpage.html">Login</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="searchpage.html">Search</a></li>      
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+<!-- =================================== Main Area ========================================== -->
+</br></br></br>
+<div id="head">
+    <h2>Registration Page</h2>
+ </div>
+
+ <div id="SessionMessage">
+    <span class="fas fa-exclamation-circle"></span>
+    <span class="error">Warning: This is a warning alert!</span>
+    <div class="close-btn">
+      <span class="fas fa-times"></span>
+    </div>
+ </div>
+
+ <form class="typeinbar">
+    <input type="text" name="" placeholder="name@email.com" required="" oninvalid="this.setCustomValidity('Must enter email address')" pattern="[^ @]*@[^ @]*.[^ @]">
+    <input type="text" placeholder="first name" required="">
+    <input type="text" placeholder="last name" required="">
+    <input type="text" name="address" placeholder="address" required>
+    <input type="password" placeholder="password" id="password" pattern="^\S{6,}$" oninvalid="this.setCustomValidity('Must have at least 6 characters')" required="">
+    <input type="text" placeholder="comfirm password" id="confirm_password" required="">
+    <input type="text" name="address" placeholder="address" required>
+
+        <select name="title" class="title">
+        <option value="" disabled selected>Title</option>
+        <option value="volvo">Mr</option>
+        <option value="saab">Mrs</option>
+        <option value="fiat">Miss</option>
+        </select>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dateofbirth" class="dob">
+    
+    <input type="text" name="phonenumber" placeholder="phone number">
+    
+    <script>
+        var password = document.getElementById("password")
+         , confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword(){
+        if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+         } else {
+            confirm_password.setCustomValidity('');
+            }
+        }
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
+    </br>
+    <div style="padding-bottom:0px">
+        <input type="submit" name="Submit" value="Submit">
+    </div>
+</form>
+</br></br></br>
+<!-- ================================= Main Area Above ====================================== -->
+<footer>
+    <p>Copyright &copy; 2021, Louay Beltaief, Obie Burns, Buyoung Choi, Hui Jiang, Joshua Perry</p>
+</footer>
+  </body>
+  </html>
